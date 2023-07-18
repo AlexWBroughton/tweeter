@@ -1,0 +1,10 @@
+.avatar{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 121px;
+  background-color: #fd7e14;
+  color:white;
+  background-image: url("https://www.transparenttextures.com/patterns/assault.png");
+}
