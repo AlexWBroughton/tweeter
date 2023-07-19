@@ -3,50 +3,65 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const tweetData = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
+const data = [
+  {
+    user: {
+      name: "Newton",
+      avatars: "https://i.imgur.com/73hZDYK.png",
+      handle: "@SirIsaac",
     },
-  "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
+    content: {
+      text: "If I have seen further it is by standing on the shoulders of giants",
     },
-  "created_at": 1461116232227
-}
+    created_at: 1461116232227,
+  },
+  {
+    user: {
+      name: "Descartes",
+      avatars: "https://i.imgur.com/nlhLi3I.png",
+      handle: "@rd",
+    },
+    content: {
+      text: "Je pense , donc je suis",
+    },
+    created_at: 1461113959088,
+  },
+];
 
-const createTweetElement = function (tweetData){
+const createTweetElement = function (tweetData) {
   const $tweet = $(`
     <article class="tweeter">
       <header class="tweet">
         <div>
-          <img id = "avatars" src=${tweetData.user.avatars}> 
-          <output id = "name">${tweetData.user.name}</output>
+          <img class="avatars" src=${tweetData.user.avatars}> 
+          <output class="name">${tweetData.user.name}</output>
         </div>
-        <output id = "handle"> ${tweetData.user.handle}</output>
+        <output class="handle"> ${tweetData.user.handle}</output>
       </header>
-      <br>
-      <output class= "content text" maxlength= "140"> ${tweetData.content.text} </output>
+      <div class="content text"> ${tweetData.content.text} </div>
       <hr>
       <footer >
         <output class="created_at text">${tweetData.created_at}</output>
-        <div class = "icons">
+        <div class ="icons">
           <i class="fa-solid fa-flag"></i>
           <i class="fa-solid fa-retweet"></i>
           <i class="fa-solid fa-heart"></i>
         </div>  
       </footer>
-    </article>`
-  );
+    </article>`);
   return $tweet;
-}
+};
 
-$(document).ready(function() {
+const renderTweets = function (tweets) {
+  //remove current tweets
+  $(".tweeter").remove();
   
-const $tweet = createTweetElement(tweetData);
+  // loops through tweets
+  for (const tweet of tweets) {
+    $("#tweet-container").append(createTweetElement(tweet));
+  }
+};
 
-  // Test / driver code (temporary)
-  console.log($tweet); // to see what it looks like
-  //$('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-  $('.container').append($tweet);
+$(document).ready(function () {
+  renderTweets(data);
 });
