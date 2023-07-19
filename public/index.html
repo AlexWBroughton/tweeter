@@ -32,6 +32,7 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/hover.js"></script>
 
   </head>
 
@@ -51,7 +52,7 @@
           <img src="/images/profile-hex.png"> 
       </div>
       <div>
-          <h2>Alex</h2>
+          <h2>Alex</h2> 
       </div>
     </header>
     <!-- Page-specific (main) content here -->
@@ -70,6 +71,29 @@
           </div>
         </form>
       </section>
+      <br>
+
+      <article >
+        <header class="tweet">
+          <div>
+            <img id = "profile2" src="/images/profile2.png"> 
+            <output id = "tweetName">Rnd User</output>
+          </div>
+          <output id = "tweetAt"> @ Rnd User2</output>
+        </header>
+        <br>
+        <output class= "text" maxlength= "140">askdjfakls;dfj;aslkdfj;laksdfjals;kdfjakls;dfjals;dkfjakls;dfj </output>
+        <hr>
+        <footer >
+          <output class="text">10 days ago</output>
+          <div class = "icons">
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-heart"></i>
+          </div>  
+        </footer>
+      </article>
     </main>
+    
   </body>
 </html>

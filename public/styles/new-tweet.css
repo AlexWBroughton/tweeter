@@ -34,3 +34,45 @@ form {
 hr{
   border: 3px solid rgb(63, 59, 59);
 }
+.text {
+  color: #000000;
+  padding-left:12px;
+}
+.tweet{
+  display: flex;
+  justify-content: space-between;
+  align-content: baseline;
+  padding-top: 20px ;
+}
+#tweetAt{
+  padding: 30px;
+}
+#profile2{
+  padding: 15 px;
+}
+#tweetName{
+  padding-top:  0px;
+  padding-bottom: 15 px;
+
+}
+footer{
+  display: flex;
+  justify-content: space-between;
+  padding-right:10px;
+}
+header{
+  padding-left: 10px;
+}
+article{
+  border: 4px solid black;
+}
+.fa-solid {
+  color: #4056A1;
+}
+.fa-solid:hover {
+  color: #fd7e14;
+  cursor: pointer;
+}
+article:hover{
+  box-shadow: 10px 10px 5px #6699cc;
+}
