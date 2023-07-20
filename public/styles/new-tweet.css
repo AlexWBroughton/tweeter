@@ -10,9 +10,12 @@
   padding-top:30px;
   bottom: none;
   border: none;
-  outline: none;
+  outline: none;  
   width: 910px;
   height: 30px;
+  font-weight: bolder;
+  font-size:smaller;
+
 }
 #tweetButton {
   font-family: 'Bungee', cursive;
@@ -44,6 +47,8 @@ hr{
   align-items: baseline;
   padding-top: 15px ;
   padding-bottom: 30px;
+  padding-left: 8px;
+  padding-right:12px;
 }
 #tweetAt{
   padding: 30px;
@@ -74,8 +79,7 @@ article{
 article:hover{
   box-shadow: 10px 10px 5px #6699cc;
 }
-.error{
-  visibility:hidden;
+.error{ 
   color: #D8000C;
   background-color: #FFBABA;
   background-image: url('https://i.imgur.com/GnyDvKN.png');
@@ -84,4 +88,8 @@ article:hover{
   padding: 15px 10px 15px 50px;
   background-repeat: no-repeat;
   background-position: 10px center
+}
+.created_at{
+  
+  font-size:smaller;
 }

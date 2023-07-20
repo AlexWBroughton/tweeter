@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function () {
+  $('.error').toggle();
 
   //escape function for string literal ${userdata}
   const escape = function (str) {
@@ -18,9 +19,9 @@ $(document).ready(function () {
         <header class="tweet">
           <div>
             <img class="avatars" src=${tweetData.user.avatars}> 
-            <output class="name">${escape(tweetData.user.name)}</output>
+            <output class="name"style="color:rgb(174,100,45)">${escape(tweetData.user.name)}</output>
           </div>
-          <output class="handle"> ${escape(tweetData.user.handle)}</output>
+          <output class="handle"style="color:rgb(174,100,45);font-weight:bolder"> ${escape(tweetData.user.handle)}</output>
         </header>
         <div class="content text"> ${escape(tweetData.content.text)} </div>
         <hr>
@@ -59,16 +60,25 @@ $(document).ready(function () {
     });
   };
 
+ 
+
+
   //error check if tweet is either null or > 140...posts if ok
   const tweetButton = $("#tweetButton");
   tweetButton.on("click", function () {
     textTweet = document.getElementById("tweet-text");
+    $('.error').slideUp(1000);
     if (textTweet.value.length > 140) {
-      alert("Please keep your tweet 140 characters or less.");
       preventDefault();
+      $('.error').slideDown(1100);
+      $('.error').empty();
+      $('.error').append( 'Too Many Characters - REMOVE more characters');
+      
     } else if (!textTweet.value.replace(/\s/g, '')) {
-      alert("Please tweet about something");
       preventDefault();
+      $('.error').slideDown(1100);
+      $('.error').empty();
+      $('.error').append( 'Not Enough Characters - ADD more characters');
     } else {
       //Ajax posting for the tweet form.  Happy path.
       preventDefault();
@@ -83,6 +93,8 @@ $(document).ready(function () {
       });      
     };
   });
+
+  $('#tweet-text').click(()=>$('.error').slideUp(1000));
     //load the tweets
     loadTweets();
 });
