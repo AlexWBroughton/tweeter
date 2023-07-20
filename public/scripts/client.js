@@ -3,6 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+$(document).ready(function () {
 const data = [
   {
     user: {
@@ -62,6 +63,16 @@ const renderTweets = function (tweets) {
   }
 };
 
-$(document).ready(function () {
+
+  
+  $(".tweetForm").submit(function( event ) {
+    event.preventDefault();
+     $.post('/tweets',$(this).serialize()).then(()=> console.log('success'))
+    //$.ajax({
+    // method: 'POST',
+    //  url: '/tweets',
+    //  data: $(this).serialize(),
+    //});
+  })
   renderTweets(data);
 });
