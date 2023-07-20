@@ -23,13 +23,12 @@ body {
 .logo {
   font-family: 'Bungee', cursive;
   font-size: 55px;
-  margin-top:50px;
 }
 
 .container{
   display: flex;
   flex-direction:column;
-  width: 90%;
+  width: 97%;
   background-color: #f4f1ec;
   margin: auto;
   color: #fd7e14;

@@ -5,7 +5,7 @@ $(document).ready(function() {
     const counter = document.getElementById("outputs");
     const textLn =  this.value.length;
     // Get the `maxlength` attribute of the textArea
-    const maxLength = this.getAttribute('maxlength');
+    const maxLength = 140;
     // Count the current number of characters left
     counter.innerHTML = Number(maxLength) - Number(textLn);
   });
