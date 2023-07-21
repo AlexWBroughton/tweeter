@@ -21,3 +21,9 @@ The project features a CSS animation along with @media for various screen sizes
 -Chance random generator helper v 1.0.2
 -md5 hash generator
 
+##Screenshots
+
+!["Screenshot of tablet screen app."] https://github.com/AlexWBroughton/tweeter/blob/master/docs/Tweeter%20TabletScreen.png
+!["Screenshot of large screen app."] https://github.com/AlexWBroughton/tweeter/blob/master/docs/Tweeter%20lgScreen.png
+
+
