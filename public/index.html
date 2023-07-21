@@ -47,35 +47,39 @@
       </div>
     </nav>  
     <hr id = "border">
-    <header class = "avatar">
-      <div>
-          <img id = "avatarImg"src="/images/profile-hex.png"> 
-      </div>
-      <div>
-          <h2 id="userName">Alex</h2>
-          <h2 id="userLastName">Broughton</h2> 
-      </div>
-    </header>
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <div class="error"></div> 
-      <section class="new-tweet">
-        <form class="tweetForm" method="POST" action="/tweets">
-          <label for="tweet-text" style="color:rgb(128, 128, 128);font-weight: 800">What are you humming about? </label>
-          <br>
-          <textarea name="text" id="tweet-text"> </textarea>
-        <br>
-        <hr>
-          <div class="tweetCount">
-            <button id = "tweetButton" type="submit" style="background-color: #4056A1">Tweet</button>
-            <output name="counter" id="outputs" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <div id="tweet-container">  
 
-      </div>
-    </main>
+    <div id = "columnDivider">
+      <header class = "avatar">
+        <div>
+            <img id = "avatarImg"src="/images/profile-hex.png"> 
+        </div>
+        <div>
+            <h2 id="userName">Alex</h2>
+            <h2 id="userLastName">Broughton</h2> 
+        </div>
+      </header>
     
+
+
+    <!-- Page-specific (main) content here -->
+      <main class="container">
+        <div class="error"></div> 
+        <section class="new-tweet">
+          <form class="tweetForm" method="POST" action="/tweets">
+            <label for="tweet-text" style="color:rgb(128, 128, 128);font-weight: 800">What are you humming about? </label>
+            <br>
+            <textarea name="text" id="tweet-text"> </textarea>
+          <br>
+          <hr>
+            <div class="tweetCount">
+              <button id = "tweetButton" type="submit" style="background-color: #4056A1">Tweet</button>
+              <output name="counter" id="outputs" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <div id="tweet-container">  
+        </div>
+      </main>
+    </div>
   </body>
 </html>

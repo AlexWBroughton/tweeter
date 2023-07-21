@@ -26,12 +26,14 @@ body {
 }
 
 .container{
+  margin-top:20%;
+  margin-right:2.5%;
+  margin-left:1%;
   display: flex;
   flex-direction:column;
   justify-content: center;
-  width: 97%;
+  width: 66%;
   background-color: #f4f1ec;
-  margin: auto;
   color: #fd7e14;
 }
 
@@ -54,46 +56,93 @@ body {
     transform: translatey(0px);
   }
 }
-.avatar {
-  position: relative;
-  top:25px;
-  left: 500px;
-  width: 300px;
-  height: 300px;
-  box-sizing: border-box;
-  border: 5px white solid;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-  transform: translatey(0px);
-  animation: float 6s ease-in-out infinite;
-}
-#userName{
-  position: relative;
-  left: 30px;
-  font-size: 46px;
-  top: -5px;
-}
-#userLastName{
-  position: relative;
-  font-size: 36px;
-  font-weight: lighter;
-  left: 0px;
-  top: -45px;
-}
-#avatarImg{
-    position:relative;
-    top: 46px;
-    width: 300px;
-    height: 175px;
-    object-fit: contain;
-}
+
 #border{
-  top:100px;
+  top:105px;
   width:100%;
   height: 50px;
   background-color: #fd7e14;
   border:none;
   position:fixed;
   background-image: url("https://www.transparenttextures.com/patterns/assault.png");
+}
+#columnDivider{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-evenly;
+}
+
+
+@media (min-width:768px) {
+  #userName{
+    position: relative;
+    left: -3px;
+    font-size: 225%;
+    top: 84%;
+    }
+    #userLastName{
+      display:none;
+      position: relative;
+      font-size: 175%;
+      font-weight: lighter;
+      left: 0px;
+      top: 55%;
+      object-fit:contain;
+    }
+    #avatarImg{
+      position:relative;
+      top: 66.5%;
+      width: 300px;
+      height: 100%;
+      object-fit: scale-down;
+  }
+}
+@media (min-width:1024px) {  
+  #userName{
+    position: relative;
+    left: -30px;
+    font-size: 225%;
+    top: 63%;
+    }
+    #userLastName{
+      display:unset;
+      position: relative;
+      font-size: 175%;
+      font-weight: lighter;
+      left: 0px;
+      top: 33%;
+      object-fit:contain;
+    }
+    #avatarImg{
+      position:relative;
+      top: 74%;
+      width: 300px;
+      height: 100%;
+      object-fit: scale-down;
+  }
+
+}
+@media (min-width:1150px) {  
+  #userName{
+  position: relative;
+  left: 35px;
+  font-size: 225%;
+  top: 75%;
+  }
+  #userLastName{
+    display:unset;
+    position: relative;
+    font-size: 175%;
+    font-weight: lighter;
+    left: 0px;
+    top: 50%;
+    object-fit:contain;
+  }
+  #avatarImg{
+    position:relative;
+    top: 74%;
+    width: 300px;
+    height: 100%;
+    object-fit: scale-down;
+}
 }

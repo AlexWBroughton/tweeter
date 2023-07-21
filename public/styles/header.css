@@ -1,10 +1,23 @@
 .avatar{
+  margin-top:20%;
+  z-index : -1;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 121px;
   background-color: #fd7e14;
   color:white;
   background-image: url("https://www.transparenttextures.com/patterns/assault.png");
+  top: 120px; 
+  left: 500px;
+  width: 33%;
+  padding-bottom:33%;
+  height:0;
+  box-sizing: border-box;
+  border: 5px white solid;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
 }

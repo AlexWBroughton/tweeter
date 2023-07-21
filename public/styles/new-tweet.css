@@ -27,7 +27,7 @@
   color: grey
 }
 .tweetCount{
-  padding-top:2px;
+  padding-top:5px;
   display: flex;
   justify-content: space-between;
 }

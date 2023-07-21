@@ -67,16 +67,16 @@ $(document).ready(function () {
   const tweetButton = $("#tweetButton");
   tweetButton.on("click", function () {
     textTweet = document.getElementById("tweet-text");
-    $('.error').slideUp(1000);
+    $('.error').slideUp('slow');
     if (textTweet.value.length > 140) {
       preventDefault();
-      $('.error').slideDown(1100);
+      $('.error').slideDown('slow');
       $('.error').empty();
       $('.error').append( 'Too Many Characters - REMOVE more characters');
       
     } else if (!textTweet.value.replace(/\s/g, '')) {
       preventDefault();
-      $('.error').slideDown(1100);
+      $('.error').slideDown('slow');
       $('.error').empty();
       $('.error').append( 'Not Enough Characters - ADD more characters');
     } else {
