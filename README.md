@@ -23,7 +23,7 @@ The project features a CSS animation along with @media for various screen sizes
 
 ##Screenshots
 
-!["Screenshot of tablet screen app."] https://github.com/AlexWBroughton/tweeter/blob/master/docs/Tweeter%20TabletScreen.png
-!["Screenshot of large screen app."] https://github.com/AlexWBroughton/tweeter/blob/master/docs/Tweeter%20lgScreen.png
+!["https://github.com/AlexWBroughton/tweeter/blob/master/docs/Tweeter%20TabletScreen.png"] 
+!["https://github.com/AlexWBroughton/tweeter/blob/master/docs/Tweeter%20lgScreen.png"]
 
 
