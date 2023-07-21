@@ -23,10 +23,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     
-    
-    
-
-    <!-- External JS -->
+    <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
@@ -36,10 +33,8 @@
   </head>
 
   <body>
-    
     <!-- Top nav bar (fixed) -->
     <nav class = "navBar">
-      
       <span class = "logo">TWEETER</span>
       <div class = "navText">
         <span class = "writeANewTweet">Write A New Tweet</span>
@@ -48,6 +43,7 @@
     </nav>  
     <hr id = "border">
 
+    <!--columnDivider wraps the avatar and tweets for flex-position: row-->
     <div id = "columnDivider">
       <header class = "avatar">
         <div>
@@ -58,10 +54,9 @@
             <h2 id="userLastName">Broughton</h2> 
         </div>
       </header>
-    
+  
 
-
-    <!-- Page-specific (main) content here -->
+    <!-- tweets layout -->
       <main class="container">
         <div class="error"></div> 
         <section class="new-tweet">
@@ -69,14 +64,15 @@
             <label for="tweet-text" style="color:rgb(128, 128, 128);font-weight: 800">What are you humming about? </label>
             <br>
             <textarea name="text" id="tweet-text"> </textarea>
-          <br>
-          <hr>
+            <br>
+            <hr>
             <div class="tweetCount">
-              <button id = "tweetButton" type="submit" style="background-color: #4056A1">Tweet</button>
+              <button id = "tweetButton" type="submit">Tweet</button>
               <output name="counter" id="outputs" class="counter" for="tweet-text">140</output>
             </div>
           </form>
         </section>
+        <!-- tweet container appends all tweet gets from server-->
         <div id="tweet-container">  
         </div>
       </main>

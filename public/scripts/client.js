@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function () {
-  $('.error').toggle();
+  $(".error").toggle();
 
   //escape function for string literal ${userdata}
   const escape = function (str) {
@@ -19,9 +19,13 @@ $(document).ready(function () {
         <header class="tweet">
           <div>
             <img class="avatars" src=${tweetData.user.avatars}> 
-            <output class="name"style="color:rgb(174,100,45)">${escape(tweetData.user.name)}</output>
+            <output class="name"style="color:rgb(174,100,45)">${escape(
+              tweetData.user.name
+            )}</output>
           </div>
-          <output class="handle"style="color:rgb(174,100,45);font-weight:bolder"> ${escape(tweetData.user.handle)}</output>
+          <output class="handle"style="color:rgb(174,100,45);font-weight:bolder"> ${escape(
+            tweetData.user.handle
+          )}</output>
         </header>
         <div class="content text"> ${escape(tweetData.content.text)} </div>
         <hr>
@@ -48,58 +52,48 @@ $(document).ready(function () {
     }
   };
 
+  //loads tweets from server
   const loadTweets = function () {
     $.get("/tweets", (response) => {
       renderTweets(response);
     });
   };
 
-  const preventDefault = function(){
+  //prevents default posting for tweetForm POSTS
+  const preventDefault = function () {
     $(".tweetForm").submit(function (event) {
       event.preventDefault();
     });
   };
 
- 
-
-
   //error check if tweet is either null or > 140...posts if ok
   const tweetButton = $("#tweetButton");
   tweetButton.on("click", function () {
     textTweet = document.getElementById("tweet-text");
-    $('.error').slideUp('slow');
+    $(".error").slideUp("slow");
     if (textTweet.value.length > 140) {
       preventDefault();
-      $('.error').slideDown('slow');
-      $('.error').empty();
-      $('.error').append( 'Too Many Characters - REMOVE more characters');
-      
-    } else if (!textTweet.value.replace(/\s/g, '')) {
+      $(".error").slideDown("slow");
+      $(".error").empty();
+      $(".error").append("Too Many Characters - REMOVE more characters");
+    } else if (!textTweet.value.replace(/\s/g, "")) {
       preventDefault();
-      $('.error').slideDown('slow');
-      $('.error').empty();
-      $('.error').append( 'Not Enough Characters - ADD more characters');
+      $(".error").slideDown("slow");
+      $(".error").empty();
+      $(".error").append("Not Enough Characters - ADD more characters");
     } else {
-      //Ajax posting for the tweet form.  Happy path.
+      //happy path
       preventDefault();
-
-      //post to server
       $.post("/tweets", $(".tweetForm").serialize()).then(() => {
         //get from server
         $.get("/tweets", (response) => {
           console.log(response);
           renderTweets(response);
         });
-      });      
-    };
+      });
+    }
   });
 
-  $('#tweet-text').click(()=>$('.error').slideUp(1000));
-    //load the tweets
-    loadTweets();
+  $("#tweet-text").click(() => $(".error").slideUp(1000));
+  loadTweets();
 });
-
-  
-
-
-
