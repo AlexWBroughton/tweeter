@@ -4,8 +4,8 @@
   position: fixed;
   /*float: left;*/
   width: 100%;
-  background: #4056A1;
-  color: #FFFFFF;
+  background: #4056a1;
+  color: #ffffff;
   /*    display: table; */
   height: 120px;
   border: none;
@@ -13,7 +13,7 @@
   padding: 1.5em;
   justify-content: space-between;
 }
-.navText{
+.navText {
   display: flex;
   flex-direction: column;
   align-items: center;
