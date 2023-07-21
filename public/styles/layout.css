@@ -63,7 +63,7 @@ body {
 /*
     beneath NavBar styling 
  */
-#border{
+#navHr{
   top:105px;
   width:100%;
   height: 50px;
@@ -74,7 +74,7 @@ body {
 }
 
 /*
-    for display:flex purposes 
+    for display:flex orientation of the hero/feature and content
  */
 #columnDivider{
   display:flex;
@@ -84,12 +84,34 @@ body {
 
 
 
+
+
+#footerHr{
+  top:4.5vw;
+  width:97.5%;
+  height: 50px;
+  left:-1.2vw;
+  background-color: #fd7e14;
+  border:none;
+  position:relative;
+  background-image: url("https://www.transparenttextures.com/patterns/assault.png");
+}
+
+
+
 .pageFooter{
   display:flex;
+  height:11vw;
   flex-direction:column;
-  align-items:center;
-  border-top:3px solid black;
+  align-items: center;
   width:97.5%;
+  background: #4056a1;
+  color:white;
+}
+.footerNotes{
+  font-size:1em;
+  padding:none;
+  margin:none;
 }
 #flex-container {
   display:flex;
@@ -101,6 +123,33 @@ body {
   margin-top:3vw;
 }
 
+
+
+
+@media (min-width:320px) {
+  #userName{
+    position: relative;
+    left: -3px;
+    font-size: 225%;
+    top: 84%;
+    }
+    #userLastName{
+      display:none;
+      position: relative;
+      font-size: 175%;
+      font-weight: lighter;
+      left: 0px;
+      top: 55%;
+      object-fit:contain;
+    }
+    #avatarImg{
+      position:relative;
+      top: 66.5%;
+      width: 300px;
+      height: 100%;
+      object-fit: scale-down;
+  }
+}
 /*
     tablet @media 
  */

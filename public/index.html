@@ -32,55 +32,57 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
   <div id="flex-container">
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav class = "navBar">
-      <span class = "logo">TWEETER</span>
-      <div class = "navText">
-        <span class = "writeANewTweet">Write A New Tweet</span>
-        <i class="fa-solid fa-angles-down" style="color: #b81414;"></i>
+    <body>
+      <!-- Top nav bar (fixed) -->
+      <nav class = "navBar">
+        <span class = "logo">TWEETER</span>
+        <div class = "navText">
+          <span class = "writeANewTweet">Write A New Tweet</span>
+          <i class="fa-solid fa-angles-down" style="color: #b81414;"></i>
+        </div>
+      </nav>  
+      <hr id = "navHr">
+
+      <!--columnDivider wraps the avatar and tweets for flex-position: row-->
+      <div id = "columnDivider">
+        <header class = "avatar">
+          <div>
+              <img id = "avatarImg"src="/images/profile-hex.png"> 
+          </div>
+          <div>
+              <h2 id="userName">Alex</h2>
+              <h2 id="userLastName">Broughton</h2> 
+          </div>
+        </header>
+    
+
+      <!-- tweets layout -->
+        <main class="container">
+          <div class="error"></div> 
+          <section class="new-tweet">
+            <form class="tweetForm" method="POST" action="/tweets">
+              <label for="tweet-text" style="color:rgb(128, 128, 128);font-weight: 800">What are you humming about? </label>
+              <br>
+              <textarea name="text" id="tweet-text"> </textarea>
+              <br>
+              <hr>
+              <div class="tweetCount">
+                <button id = "tweetButton" type="submit">Tweet</button>
+                <output name="counter" id="outputs" class="counter" for="tweet-text">140</output>
+              </div>
+            </form>
+          </section>
+          <!-- tweet container appends all tweet gets from server-->
+          <div id="tweet-container">  
+          </div>
+        </main>
       </div>
-    </nav>  
-    <hr id = "border">
-
-    <!--columnDivider wraps the avatar and tweets for flex-position: row-->
-    <div id = "columnDivider">
-      <header class = "avatar">
-        <div>
-            <img id = "avatarImg"src="/images/profile-hex.png"> 
-        </div>
-        <div>
-            <h2 id="userName">Alex</h2>
-            <h2 id="userLastName">Broughton</h2> 
-        </div>
-      </header>
-  
-
-    <!-- tweets layout -->
-      <main class="container">
-        <div class="error"></div> 
-        <section class="new-tweet">
-          <form class="tweetForm" method="POST" action="/tweets">
-            <label for="tweet-text" style="color:rgb(128, 128, 128);font-weight: 800">What are you humming about? </label>
-            <br>
-            <textarea name="text" id="tweet-text"> </textarea>
-            <br>
-            <hr>
-            <div class="tweetCount">
-              <button id = "tweetButton" type="submit">Tweet</button>
-              <output name="counter" id="outputs" class="counter" for="tweet-text">140</output>
-            </div>
-          </form>
-        </section>
-        <!-- tweet container appends all tweet gets from server-->
-        <div id="tweet-container">  
-        </div>
-      </main>
-    </div>
-  </body>
-<footer class="pageFooter"> 
-  <h3>In collaboration with  <a href= "https://www.lighthouselabs.ca/">Lighthouse Labs</a></h1>
-  <h4>Hero feature adopted from <a href= "https://blog.hubspot.com/website/css-animation-examples">https://blog.hubspot.com/website/css-animation-examples</a> by Mario Duarte</h2>
-</footer>
-</div>
+    </body>
+    <hr id = "footerHr">
+    <footer class="pageFooter"> 
+    <p  class="footerNotes">In collaboration with  <a href= "https://www.lighthouselabs.ca/">Lighthouse Labs.</a> 
+    <br>
+    <br>  Hero feature adopted from <a href= "https://blog.hubspot.com/website/css-animation-examples">https://blog.hubspot.com/website/css-animation-examples</a> by Mario Duarte<p>
+    </footer>
+  </div>
 </html>
