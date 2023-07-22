@@ -65,6 +65,16 @@ $(document).ready(function () {
       event.preventDefault();
     });
   };
+  
+  $('tweet-text').change(()=>{
+    const counter = $("#outputs");
+    counter.val(140 - counter.val());
+    if (counter.val() < 140){
+      counter.css('color',"#FF0000");
+    } else {
+      counter.css('color','grey');
+    }
+  });
 
   //error check if tweet is either null or > 140...posts if ok
   const tweetButton = $("#tweetButton");
@@ -83,12 +93,15 @@ $(document).ready(function () {
       $(".error").append("Not Enough Characters - ADD more characters");
     } else {
       //happy path
+      //clear the textArea and reset the counter to 140
       preventDefault();
       $.post("/tweets", $(".tweetForm").serialize()).then(() => {
         //get from server
         $.get("/tweets", (response) => {
-          console.log(response);
           renderTweets(response);
+          textTweet.value = "";
+          const counter = $("#outputs");
+          $(outputs).val(140);
         });
       });
     }
