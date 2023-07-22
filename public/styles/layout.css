@@ -76,11 +76,7 @@ body {
 /*
     for display:flex orientation of the hero/feature and content
  */
-#columnDivider{
-  display:flex;
-  flex-direction:row;
-  justify-content: space-evenly;
-}
+
 
 
 
@@ -134,49 +130,62 @@ body {
     left: -3px;
     font-size: 225%;
     top: 84%;
-    }
-    #userLastName{
-      display:none;
-      position: relative;
-      font-size: 175%;
-      font-weight: lighter;
-      left: 0px;
-      top: 55%;
-      object-fit:contain;
-    }
-    #avatarImg{
-      position:relative;
-      top: 66.5%;
-      width: 300px;
-      height: 100%;
-      object-fit: scale-down;
+  }
+  #userLastName{
+    display:none;
+    position: relative;
+    font-size: 175%;
+    font-weight: lighter;
+    left: 0px;
+    top: 55%;
+    object-fit:contain;
+  }
+  #avatarImg{
+    position:relative;
+    top: 66.5%;
+    width: 300px;
+    height: 100%;
+    object-fit: scale-down;
+  }
+  #columnDivider{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
   }
 }
 /*
     tablet @media 
  */
 @media (min-width:768px) {
+  #columnDivider{
+
+  }
   #userName{
     position: relative;
     left: -3px;
     font-size: 225%;
     top: 84%;
-    }
-    #userLastName{
-      display:none;
-      position: relative;
-      font-size: 175%;
-      font-weight: lighter;
-      left: 0px;
-      top: 55%;
-      object-fit:contain;
-    }
-    #avatarImg{
-      position:relative;
-      top: 66.5%;
-      width: 300px;
-      height: 100%;
-      object-fit: scale-down;
+  }
+  #userLastName{
+    display:none;
+    position: relative;
+    font-size: 175%;
+    font-weight: lighter;
+    left: 0px;
+    top: 55%;
+    object-fit:contain;
+  }
+  #avatarImg{
+    position:relative;
+    top: 66.5%;
+    width: 300px;
+    height: 100%;
+    object-fit: scale-down;
+  }
+  #columnDivider{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
   }
 }
 
@@ -189,22 +198,27 @@ body {
     left: -30px;
     font-size: 225%;
     top: 63%;
-    }
-    #userLastName{
-      display:unset;
-      position: relative;
-      font-size: 175%;
-      font-weight: lighter;
-      left: 0px;
-      top: 33%;
-      object-fit:contain;
-    }
-    #avatarImg{
-      position:relative;
-      top: 74%;
-      width: 300px;
-      height: 100%;
-      object-fit: scale-down;
+  }
+  #userLastName{
+    display:unset;
+    position: relative;
+    font-size: 175%;
+    font-weight: lighter;
+    left: 0px;
+    top: 33%;
+    object-fit:contain;
+  }
+  #avatarImg{
+    position:relative;
+    top: 74%;
+    width: 300px;
+    height: 100%;
+    object-fit: scale-down;
+  }
+  #columnDivider{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
   }
 }
 
@@ -233,5 +247,10 @@ body {
     width: 300px;
     height: 100%;
     object-fit: scale-down;
+  }
+  #columnDivider{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
   }
 }
